@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#0f1410" />
+  <meta name="description" content="European Maps-to-retainer desk. Hunt trades, brief with Grok Claude or ChatGPT, mock in Lovable, sell GBP retainers in euros." />
+  <title>Atlas Local — European Maps-to-retainer desk</title>
+  <link rel="manifest" href="/manifest.webmanifest" />
+  <link rel="icon" href="/icon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="/icon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&family=Source+Serif+4:opsz,wght@8..60,500;8..60,650&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <div class="brand"><div class="mark">A</div><div><h1>Atlas Local</h1><p>Europe only · Maps → mockup → retainer</p></div></div>
+      <nav class="nav">
+        <button data-tab="playbook" class="active">Playbook</button>
+        <button data-tab="hunt">Hunt</button>
+        <button data-tab="prompts">AI desk</button>
+        <button data-tab="outreach">Outreach</button>
+        <button data-tab="retainers">Retainers</button>
+        <button data-tab="pipeline">Pipeline</button>
+      </nav>
+    </header>
+    <section data-panel="playbook">
+      <div class="hero">
+        <div class="kicker">The stack, reprinted for Europe</div>
+        <h2>Hunt independent trades on Maps. Close retainers in euros.</h2>
+        <p class="lede">Google Maps finds local operators with weak sites. Grok, Claude or ChatGPT writes the brief. Lovable ships a mockup. You sell the page once, then the Google Business Profile system every month. Different law, different CPC, different cities than the US threads.</p>
+      </div>
+      <div class="grid-3" style="margin-bottom:22px">
+        <article class="card"><div class="step-num">01 · Maps</div><h3>Quiet independents</h3><p class="muted">Roofers, plumbers, HVAC, electricians, dentists, salons, small law offices. Skip franchises and Shopify shops.</p></article>
+        <article class="card"><div class="step-num">02 · AI desk</div><h3>Three artefacts</h3><p class="muted">Diagnosis, site brief, opening line in the commune language. Never mention AI to the owner.</p></article>
+        <article class="card"><div class="step-num">03 · Lovable</div><h3>Live URL</h3><p class="muted">Only the top 5–8 names. The mockup is the pitch. Then the monthly Maps system.</p></article>
+      </div>
+      <div class="card" style="margin-bottom:18px">
+        <h3>Sweet-spot pattern (EU)</h3>
+        <div class="grid-2" style="margin-top:12px">
+          <div><strong>Established</strong><p class="muted">5+ years, clearly local.</p></div>
+          <div><strong>Quiet reviews</strong><p class="muted">Under ~80 reviews.</p></div>
+          <div><strong>Weak web</strong><p class="muted">No site, or a 2016 WordPress relic.</p></div>
+          <div><strong>Solid rating</strong><p class="muted">3.9★ and up.</p></div>
+          <div><strong>Independent</strong><p class="muted">Owner answers the phone.</p></div>
+          <div><strong>Service area</strong><p class="muted">City + communes, not a pan-EU brand.</p></div>
+        </div>
+      </div>
+    </section>
+    <section data-panel="hunt" class="hidden">
+      <div class="hero"><div class="kicker">Step 1</div><h2>Open Maps. Hunt one commune.</h2>
+        <p class="lede">25–30 names from one niche in one city. Atlas does not scrape Google.</p></div>
+      <div class="grid-2">
+        <div class="card">
+          <label>Country</label><select id="country"></select>
+          <label>City</label><select id="city"></select>
+          <label>Niche</label><select id="niche"></select>
+          <p class="muted" id="hunt-hint" style="margin-bottom:12px"></p>
+          <div class="row">
+            <a class="btn" id="maps-link" href="#" target="_blank" rel="noreferrer">Open this hunt in Google Maps</a>
+            <button class="btn ghost" id="copy-maps">Copy link</button>
+          </div>
+        </div>
+        <div class="card">
+          <h3>Market filter</h3>
+          <p class="muted" id="filter-copy" style="margin:8px 0 12px"></p>
+          <p class="chip" id="cpc"></p>
+          <p class="muted" style="margin-top:12px">NL/DACH trade ads often sit around €1.50–€5 per click. Do not recycle a US $60 CPC story.</p>
+        </div>
+      </div>
+      <div class="card" style="margin-top:16px">
+        <h3>Log a listing</h3>
+        <div class="grid-2" style="margin-top:12px">
+          <div>
+            <label>Business name</label><input id="name" value="Dakwerken Vermeulen" />
+            <label>Trade as written locally</label><input id="type" value="dakwerker" />
+            <label>Copy language</label><input id="language" value="NL" />
+          </div>
+          <div>
+            <label>Rating / reviews / years</label>
+            <div class="row">
+              <input id="rating" value="4.6" /><input id="reviews" value="37" /><input id="years" value="12+" />
+            </div>
+            <label>Website</label><input id="website" value="none" />
+            <label>One concrete observation</label>
+            <textarea id="observation">strong storm-damage reviews but the listed site is a broken WordPress page from 2015</textarea>
+          </div>
+        </div>
+        <button class="btn copper" id="save-lead">Save to pipeline</button>
+      </div>
+    </section>
+    <section data-panel="prompts" class="hidden">
+      <div class="hero"><div class="kicker" id="engine-label">Step 2 · Grok</div>
+        <h2>One prompt, three deliverables.</h2>
+        <p class="lede">Paste into Grok, Claude or ChatGPT. Local language first. Never mention the model to the owner.</p></div>
+      <div class="row" style="margin-bottom:16px">
+        <button class="btn" data-engine="Grok">Grok</button>
+        <button class="btn ghost" data-engine="Claude">Claude</button>
+        <button class="btn ghost" data-engine="ChatGPT">ChatGPT</button>
+      </div>
+      <div class="grid-2">
+        <article class="card"><h3>Strategist prompt</h3><pre class="prompt-box" id="strategist"></pre>
+          <div class="row" style="margin-top:10px"><button class="btn" id="copy-strategist"><span id="copy-engine">Copy for Grok</span></button></div></article>
+        <article class="card"><h3>Lovable mockup prompt</h3><pre class="prompt-box" id="lovable"></pre>
+          <div class="row" style="margin-top:10px">
+            <button class="btn copper" id="copy-lovable">Copy Lovable prompt</button>
+            <a class="btn ghost" href="https://lovable.dev" target="_blank" rel="noreferrer">Open Lovable</a>
+          </div></article>
+      </div>
+    </section>
+    <section data-panel="outreach" class="hidden">
+      <div class="hero"><div class="kicker">Step 4 · compliance first</div>
+        <h2>The mockup sells. The channel must be legal.</h2>
+        <p class="lede">Never mention AI. In Europe the channel matters as much as the sentence.</p></div>
+      <div id="legal-banner" class="banner"></div>
+      <div class="grid-2">
+        <article class="card"><h3>Opener (under 70 words)</h3><pre class="prompt-box" id="message"></pre>
+          <div class="row" style="margin-top:10px"><button class="btn" id="copy-message">Copy message</button></div></article>
+        <article class="card"><h3>Country desk</h3>
+          <table><thead><tr><th>Market</th><th>Email</th><th>First channel</th></tr></thead><tbody id="legal-table"></tbody></table>
+        </article>
+      </div>
+    </section>
+    <section data-panel="retainers" class="hidden">
+      <div class="hero"><div class="kicker">The better model</div>
+        <h2>Sites pay once. The Local Pack pays monthly.</h2>
+        <p class="lede">European trades do not need a US click-price myth. They need a profile that looks alive.</p></div>
+      <div class="card" style="margin-bottom:16px"><p class="muted">Local Pack listings take on the order of 40–50% of local-intent clicks in recent EU write-ups. DMA tests can surface extra results. Own the map.</p></div>
+      <div class="grid-2">
+        <article class="card">
+          <h3>Retainer math (€)</h3>
+          <label>GBP clients</label><input id="clients" type="number" min="1" max="40" value="8" />
+          <label>Fee per client / month</label><input id="fee" type="number" min="299" max="1200" value="549" />
+          <p id="monthly" style="font-family:var(--font);font-size:2rem;margin:8px 0">€4.392</p>
+          <p class="muted" id="math-explain"></p>
+        </article>
+        <article class="card">
+          <h3>Scale bands</h3>
+          <div class="bars" style="margin-top:12px">
+            <div class="bar b1"><span>1 client</span><span></span><span>€449–€749</span></div>
+            <div class="bar b2"><span>8 clients</span><span></span><span>€3.6k–€6k</span></div>
+            <div class="bar b3"><span>18 clients</span><span></span><span>€8k–€13.5k</span></div>
+          </div>
+          <p class="muted" style="margin-top:12px">Atlas Agent drafts audits, posts and review replies. You still record a two-minute Loom in the owner’s language.</p>
+        </article>
+      </div>
+      <article class="card" style="margin-top:16px"><h3>Retainer pitch</h3><pre class="prompt-box" id="pitch"></pre>
+        <button class="btn" id="copy-pitch" style="margin-top:10px">Copy pitch</button></article>
+    </section>
+    <section data-panel="pipeline" class="hidden">
+      <div class="hero"><div class="kicker">Local list</div><h2>Your desk, in this browser.</h2>
+        <p class="lede">Leads stay on this device (localStorage).</p></div>
+      <div id="pipeline-list" class="lead-list"></div>
+    </section>
+    <p class="footer-note">Operator toolkit, not legal advice. Confirm outreach rules in DE/FR/AT/IT before scaling email. Built for European communes, not Austin.</p>
+  </div>
+  <script src="/data.js"></script>
+  <script src="/app.js"></script>
+</body>
+</html>
