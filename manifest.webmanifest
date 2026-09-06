@@ -1,0 +1,14 @@
+{
+  "name": "Atlas Local EU",
+  "short_name": "Atlas Local",
+  "description": "European Google Maps lead desk and GBP retainer toolkit.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#0f1410",
+  "theme_color": "#0f1410",
+  "lang": "en",
+  "icons": [
+    { "src": "/icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }
+  ]
+}
